@@ -14,13 +14,13 @@ import { DisplayComponent } from './components/display/display.component';
 // Selection Component
 
 import { SelectionComponent } from './components/selection/selection.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayComponent,
-    SelectionComponent
+    SelectionComponent,
   ],
   imports: [
     BrowserModule, 

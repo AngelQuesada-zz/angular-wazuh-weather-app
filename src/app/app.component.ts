@@ -4,7 +4,8 @@ export class Weather {
   city: String 
   conditions: String 
   temperature: number 
-  icon: String 
+  icon: String
+  humidity: number
 }
 
 @Component({
@@ -12,6 +13,7 @@ export class Weather {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'weather-app';
 }

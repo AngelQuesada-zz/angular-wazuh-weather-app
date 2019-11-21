@@ -1,0 +1,105 @@
+@import '~src/sass/variables';
+@import '~src/sass/colors';
+@import '~src/sass/mixins';
+
+#weather-info {
+    
+    background:#66666673;
+    width:100%;
+    color:$wazuh_grey;
+    
+    .card{
+        background:$wazuh_white;
+    }
+    
+    .location-container {
+        font-size:2.7rem;
+        width:100%;
+        padding-left:1rem;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding:1rem;
+        color:white;
+    }
+
+    .element{
+        padding:1rem;
+        float:left;
+        font-size:1.5rem;
+        width:30%;
+        display:flex;
+        justify-content: center;
+ 
+        &.description{
+            width:40%;
+            border-left: 0px;
+        }
+        
+        .content {
+            display:block;
+            float:left;
+
+            &::first-letter{
+                text-transform: uppercase;
+            }
+
+            .icon-container{
+                img{
+                    border-radius:50%;
+                    background: #cacaca;
+                    max-width:70px;
+                    margin-top: 8px;
+                }
+            }
+            
+            .text{
+                float:left;
+                width:100%;
+                font-size:1.5rem;
+                text-align: center;
+            }
+            .image{
+                float:left;
+                width:100%;
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                height:80px;
+
+                i{
+                    font-size:3.2rem;
+                    color:$wazuh_yellow;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.table{
+
+    margin-top:1rem;
+
+    td.icon{
+        padding-top:0px;
+        img{
+            max-width: 37px;
+            margin-top: 5px;
+            background:#acacac;
+            border-radius:50%;
+        }
+    }
+
+    th {
+        color:$wazuh_blue;
+        i {
+            margin-left:3px;
+            color:$wazuh_blue;
+        }
+    }
+}
+ 
+

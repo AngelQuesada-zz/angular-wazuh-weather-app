@@ -1,5 +1,6 @@
-<form (ngSubmit)="submit()">
-  City:<br>
-  <input type="text" name="city" [(ngModel)]="city"><br>
-  <input type="submit" value="Submit">
+<form id="city-form" (ngSubmit)="submit()">
+  <div class="form-group">
+    <input #cityInput class="form-control" placeholder="City..." type="text" name="city" [(ngModel)]="city"><br>
+    <input (click) = "cityInput.value = ''" class="btn btn-block text-white" type="submit" value="Get Weather">
+  </div>
 </form>

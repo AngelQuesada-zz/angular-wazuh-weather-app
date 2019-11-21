@@ -1,0 +1,30 @@
+@import '~src/sass/variables';
+@import '~src/sass/colors';
+@import '~src/sass/mixins';
+
+#city-form{
+
+    input[type=text] {
+        border:none;
+        border-radius:0px;
+        border-bottom:3px solid $wazuh_blue;
+        font-size:1.4rem;
+        font-weight: bold;
+        color:$wazuh_blue;
+        
+        &::placeholder{
+            color:$wazuh_grey;
+            opacity:.5;
+            font-size:1.3rem;
+        }
+    }
+
+    .form-control:focus {
+        box-shadow:none;
+    }
+
+    .btn{
+        background:$wazuh_blue;
+    }
+
+}

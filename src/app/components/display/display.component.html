@@ -1,6 +1,50 @@
-<h2>{{weather.city}}</h2>
-<img [src]="weather.icon" style="float: left;"/>
-<p>
-  Conditions: {{weather.conditions}}<br/>
-  Temperature: {{weather.temperature}} °F<br/>
-</p>
+
+<div id="weather-info">
+  <div *ngIf="weather.city" class="location-container">
+    {{weather.city}}
+  </div> 
+  <div *ngIf="weather.conditions" class="element description">
+    <div class="content">
+        <div class="text">{{weather.conditions}}</div>
+        <div class="icon-container">
+          <img [src]="weather.icon" alt={{weather.conditions}}>
+        </div>
+    </div>
+  </div>
+  <div *ngIf="weather.temperature" class="element temperature">
+    <div class="content ">
+        <div class="text">{{weather.temperature}} °C</div>
+        <div class="image"><i class="fas fa-thermometer-half"></i></div>
+    </div>
+  </div>
+  <div *ngIf="weather.humidity" class="element humidity">
+    <div class="content">
+        <div class="text">{{weather.humidity}} %</div>
+        <div class="image"><i class="fas fa-tint"></i></div>
+    </div>
+  </div>
+</div>
+<table *ngIf="history.length > 0" class="table">
+  <thead>
+    <tr>
+      <th class="text-center" scope="col">City <i class="fas fa-city"></i></th>
+      <th class="text-center" scope="col">Temperature <i class="fas fa-thermometer-half"></i></th>
+      <th class="text-center" scope="col">Humidity <i class="fas fa-tint"></i></th>
+      <th class="text-center" scope="col">Icon <i class="fas fa-cloud"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of history">
+      <td class="text-center">{{item.city}}</td>
+      <td class="text-center">{{item.temperature}} °C</td>
+      <td class="text-center">{{item.humidity}} %</td>
+      <td class='icon text-center'>
+        <img [src]="item.icon">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+  
+

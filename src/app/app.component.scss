@@ -1,0 +1,32 @@
+@import '~src/sass/variables';
+@import '~src/sass/colors';
+@import '~src/sass/mixins';
+
+.navbar{
+    img{
+        width:125px;
+    }
+    ul{
+        a{
+            color:$wazuh_blue;
+            font-weight:500;
+        }
+    }
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+
+    .row{
+        width:100%;
+        display:flex;
+        justify-content: center;
+
+        .card{
+            width:100%;
+            max-width:800px;
+        }
+    }
+
+}
