@@ -23,6 +23,6 @@ export class DisplayComponent {
     if(this.history.length > 4){  
       this.history.shift()
     }
-    this.history.push(this.weather)
+    this.history.unshift(this.weather)
   }
 }
